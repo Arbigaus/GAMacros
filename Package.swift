@@ -30,6 +30,10 @@ let package = Package(
             dependencies: [
                 .product(name: "SwiftSyntaxMacros", package: "swift-syntax"),
                 .product(name: "SwiftCompilerPlugin", package: "swift-syntax")
+            ],
+            path: "Sources/GAMacrosMacros",
+            swiftSettings: [
+                .define("ENABLE_MACRO_PLUGIN")
             ]
         ),
 
