@@ -8,9 +8,9 @@
 import SwiftCompilerPlugin
 
 @main
-struct GAMacrosPlugin: CompilerPlugin {
-    let providingMacros: [Macro.Type] = [
+public struct GAMacrosPlugin: CompilerPlugin {
+    public let providingMacros: [Macro.Type] = [
         StringifyMacro.self,
-        SinkifyMacro.self
+        SinkifyMacro.self,
     ]
 }
