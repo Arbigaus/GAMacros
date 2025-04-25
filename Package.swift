@@ -6,7 +6,7 @@ import CompilerPluginSupport
 
 let package = Package(
     name: "GAMacros",
-    platforms: [.macOS(.v10_15), .iOS(.v13), .tvOS(.v13), .watchOS(.v6), .macCatalyst(.v13)],
+    platforms: [.macOS(.v12), .iOS(.v13), .tvOS(.v13), .watchOS(.v6), .macCatalyst(.v13)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
@@ -30,10 +30,6 @@ let package = Package(
             dependencies: [
                 .product(name: "SwiftSyntaxMacros", package: "swift-syntax"),
                 .product(name: "SwiftCompilerPlugin", package: "swift-syntax")
-            ],
-            path: "Sources/GAMacrosMacros",
-            swiftSettings: [
-                .define("ENABLE_MACRO_PLUGIN")
             ]
         ),
 

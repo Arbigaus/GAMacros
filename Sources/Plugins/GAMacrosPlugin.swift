@@ -8,8 +8,8 @@
 import SwiftCompilerPlugin
 
 @main
-public struct GAMacrosPlugin: CompilerPlugin {
-    public let providingMacros: [Macro.Type] = [
+struct GAMacrosPlugin: CompilerPlugin {
+    let providingMacros: [Macro.Type] = [
         StringifyMacro.self,
         SinkifyMacro.self,
     ]
